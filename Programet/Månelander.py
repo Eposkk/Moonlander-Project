@@ -29,15 +29,15 @@ SILVER=(192,192,192)
 """Inneholder bildene som blir brukt av pygame og gravitasjonskonstanten"""
 
 gm = 1.62
-moon=pygame.image.load('144074-0.png') 
-lander=pygame.image.load('pixel_moon_lander_by_aslansilva-d34xrwc.png') 
-landerødelagt=pygame.image.load('pixel_moon_lander_by_aslansilva-d34xrwc-ødelagt.png')
-flameMed=pygame.image.load('Untitled-1.png')    
-flameMax=pygame.image.load('Untitled-2.png')
-flameMin=pygame.image.load('Untitled-3.png')
-swe=pygame.image.load('144074-0-swe.png')
-rcs=pygame.image.load('Flamme.png')
-rcs1=pygame.image.load('Flamme1.png')
+moon=pygame.image.load('pics/144074-0.png') 
+lander=pygame.image.load('pics/pixel_moon_lander_by_aslansilva-d34xrwc.png') 
+landerødelagt=pygame.image.load('pics/pixel_moon_lander_by_aslansilva-d34xrwc-ødelagt.png')
+flameMed=pygame.image.load('pics/Untitled-1.png')    
+flameMax=pygame.image.load('pics/Untitled-2.png')
+flameMin=pygame.image.load('pics/Untitled-3.png')
+swe=pygame.image.load('pics/144074-0-swe.png')
+rcs=pygame.image.load('pics/Flamme.png')
+rcs1=pygame.image.load('pics/Flamme1.png')
 
 
 #-------------------------------------------
@@ -276,38 +276,6 @@ def landing(vy): #Den lander, og det skrives en annen beskjed
     skrivE((str(round(vy,1))),186,510)
     skrivE(('m/s'),225,510)
 #end landing
-
-#---------------------------------------------
-    
-    
-class button():
-    def __init__(self, color, x,y,width,height, text=''):
-        self.color = color
-        self.x = x
-        self.y = y
-        self.width = width
-        self.height = height
-        self.text = text
-
-    def draw(self,win,outline=None):
-        #Call this method to draw the button on the screen
-        if outline:
-            pygame.draw.rect(win, outline, (self.x-2,self.y-2,self.width+4,self.height+4),0)
-            
-        pygame.draw.rect(win, self.color, (self.x,self.y,self.width,self.height),0)
-        
-        if self.text != '':
-            font = pygame.font.SysFont('comicsans', 60)
-            text = font.render(self.text, 1, (0,0,0))
-            win.blit(text, (self.x + (self.width/2 - text.get_width()/2), self.y + (self.height/2 - text.get_height()/2)))
-
-    def isOver(self, pos):
-        #Pos is the mouse position or a tuple of (x,y) coordinates
-        if pos[0] > self.x and pos[0] < self.x + self.width:
-            if pos[1] > self.y and pos[1] < self.y + self.height:
-                return True
-            
-        return False
     
 #----------------- HOVEDPROGRAM -----------------------
 """Hovedprogrammet, her kjøres alle funskjonene vi ahr definert ovenfor"""
@@ -320,8 +288,6 @@ initmotor()
 initinstrumenter()
 
 mode='u' #setter moden til vent
-
-knapp=button(RØD, 200,200,200,200,'Knapp')
 
 while mode == 'u' or 'a' or 'm' or't' : #Hovedløkke: Hovedprogrammet kjøres så lenge landeren er over overflaten
 
@@ -337,7 +303,6 @@ while mode == 'u' or 'a' or 'm' or't' : #Hovedløkke: Hovedprogrammet kjøres så l
         visinstrumenter() #Tegner alle instrumenter
         pygame.display.update() 
         while y <= 0:
-            knapp.draw(flate)
             for e in pygame.event.get(): 
                 if e.type == QUIT :
                     pygameSlutt()
@@ -474,7 +439,6 @@ while mode == 'u' or 'a' or 'm' or't' : #Hovedløkke: Hovedprogrammet kjøres så l
         initmasser(1000)
         initmotor()
         t=0
-        knapp.draw(flate, False)
         for e in pygame.event.get():
             pos=pygame.mouse.get_pos()
             if e.type==pygame.KEYDOWN:
