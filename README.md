@@ -19,7 +19,9 @@ To install pygame run the following command in your favorite shell:
 
 ```pip install pygame```
 
-Run ```Månelander.py``` and play the game
+Run ```Månelander.py``` in a Python IDE like Spyder. You may need to run pygame install command in the IDE console
+
+Play the game!
 
 # Game instructions
 
