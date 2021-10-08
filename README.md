@@ -1,13 +1,13 @@
 # Moonlander-Project
-Final assignement in the High School Subject Programmering og Modellering.
+Final assignment in the High School Subject Programmering og Modellering.
 
 This repository contains a game where the goal is to land a spaceship on the moon
 
 The game simulates fuel flow, weight and gravity. You can land it yourself or choose to watch the computer perform a perfect landing
 
-Each time you launch the game, the starting paramaters are randomized.
+Each time you launch the game, the starting parameters are randomized.
 
-# Requierments
+# Requirements
 
 - Python 3
 
@@ -38,7 +38,7 @@ Use the up and down arrow to change the engine thrust
 
 Use left and right arrow to change sideways thrust
 
-To land the ship safely, the ladning speed must be no more than 1 m/s
+To land the ship safely, the landing speed must be no more than 1 m/s
 
 # Screenshots
 
