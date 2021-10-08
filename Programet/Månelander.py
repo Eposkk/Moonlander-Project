@@ -449,9 +449,6 @@ while mode == 'u' or 'a' or 'm' or't' : #Hovedløkke: Hovedprogrammet kjøres så l
                         mode='m'
                 if e.type == QUIT :
                     pygameSlutt()
-            if e.type == pygame.MOUSEBUTTONDOWN:
-                if knapp.isOver(pos):
-                    print('pikk')
             if e.type == QUIT :
                 pygameSlutt()
         pygame.display.update()
