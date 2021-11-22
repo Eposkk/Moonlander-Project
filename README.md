@@ -7,6 +7,8 @@ The game simulates fuel flow, weight and gravity. You can land it yourself or ch
 
 Each time you launch the game, the starting parameters are randomized.
 
+NOTE: This project was written as the final assignment in the first programming course i ever took. There are therefore a number of issues with this project
+
 # Requirements
 
 - Python 3
