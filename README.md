@@ -44,6 +44,6 @@ To land the ship safely, the landing speed must be no more than 1 m/s
 
 # Screenshots
 
-<img src="Programet/screenshots/Screenshot 2021-10-08 124218.png" alt="drawing" width="200"/>  <img src="Programet/screenshots/Screenshot 2021-10-08 124316.png" alt="drawing" width="200"/> 
+<img src="Game/screenshots/Screenshot 2021-10-08 124218.png" alt="drawing" width="200"/>  <img src="Game/screenshots/Screenshot 2021-10-08 124316.png" alt="drawing" width="200"/> 
 
 
